@@ -18,7 +18,11 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 22;
 
+if (votingAge >= 18) {
+  console.log("true");
+}
 
 /*
 Task 1b - Values
@@ -31,8 +35,9 @@ Do the following:
    HINT: no function required
 */
 
-
-
+const wage = 15;
+var salary = wage*1920;
+console.log(`Your salary is ${salary}`);
 
 
 /*
@@ -46,8 +51,10 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+var year = "1999";
+var newYear = Number(year);
+console.log(year);
+console.log(newYear);
 
 /*
 Task 1d - Multiply
@@ -58,10 +65,9 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a*b;
   }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,8 +80,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(a){
+    return a*7;
 }
 
 
@@ -107,10 +113,26 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if (age > 1) {
+    if (6 < weight < 10) {
+      console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.04}`);
+    } else if (11 < weight < 15) {
+      console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.03}`);
+    } else if (15 < weight) {
+      console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.02}`);
+    } else {
+      console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.05}`);
+    }
+  } // greater than 1 logic ends
+  if (.58 < age < 1) {
+    console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.04}`);
+  } else if (.33 < age < .58) {
+    console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.05}`);
+  } else {
+    console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.1}`);
   }
-
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
