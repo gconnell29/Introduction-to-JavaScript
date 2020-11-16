@@ -53,7 +53,6 @@ Do the following:
 
 var year = "1999";
 var newYear = Number(year);
-console.log(year);
 console.log(newYear);
 
 /*
@@ -154,8 +153,38 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
+
 function game(user, computer){
-    /*add your code here*/
+  computer = Math.random();
+  if (computer < .33) {
+    computer = "rock";
+  } else if (computer > .66) {
+    computer = "scissors"
+  } else {
+    computer = "paper"
+  } // computer value is now assigned
+  if (user === "rock" && computer === "paper") {
+    console.log(`${user} vs ${computer} = you lose!`)
+    return "you lose!";
+  } else if (user === "rock" && computer === "scissors") {
+    console.log(`${user} vs ${computer} = you win!`)
+    return "you win!";
+  } else if (user === "paper" && computer === "rock") {
+    console.log(`${user} vs ${computer} = you win!`)
+    return "you win!";
+  } else if (user === "paper" && computer === "scissors") {
+    console.log(`${user} vs ${computer} = you lose!`)
+    return "you lose!";
+  } else if (user === "scissors" && computer === "paper") {
+    console.log(`${user} vs ${computer} = you win!`)
+    return "you win!";
+  } else if (user === "scissors" && computer === "rock") {
+    console.log(`${user} vs ${computer} = you lose!`)
+    return "you lose!";
+  } else {
+    console.log(`${user} vs ${computer} = it's a tie!`)
+    return "it's a tie!";
+  }
 }
   
   
