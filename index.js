@@ -114,22 +114,29 @@ Use the hungryDog function and feeding requirements below to do the following:
 
 function hungryDog(weight, age){
   if (age > 1) {
-    if (6 < weight < 10) {
+    if (6 < weight && weight < 10) {
       console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.04}`);
-    } else if (11 < weight < 15) {
+      return weight*.04;
+    } else if (11 < weight && weightweight < 15) {
       console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.03}`);
-    } else if (15 < weight) {
+      return weight*.03;
+    } else if (15 < weight && weightweight) {
       console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.02}`);
+      return weight*.02;
     } else {
       console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.05}`);
+      return weight*.05;
     }
   } // greater than 1 logic ends
-  if (.58 < age < 1) {
+  if (.58 < age && age < 1) {
     console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.04}`);
-  } else if (.33 < age < .58) {
+    return weight*.04;
+  } else if (.33 < age && age < .58) {
     console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.05}`);
+    return weight*.05;
   } else {
     console.log(`Age is ${age}, and weight is ${weight}, so food is ${weight*.1}`);
+    return weight*.1;
   }
 }
 
@@ -200,8 +207,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+  return kilometers*.62
   }
 
 
@@ -214,8 +221,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeters){
+    return centimeters*.032;
   }
  
 
@@ -230,8 +237,11 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(startNum){
+  for (let i = 0; i < startNum; startNum--) {
+    let nextNum = startNum-1;
+      console.log(`${startNum} bottles of soda on the wall, ${startNum} bottles of soda, take one down pass it around ${nextNum} bottles of soda on the wall`);
+    }
   }
 
 
@@ -250,9 +260,24 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(number){
+  if (60 < number && number < 69) {
+    console.log(`${number} is a D grade`);
+    return "D";
+  } else if (70 < number && number < 79) {
+    console.log(`${number} is a C grade`);
+    return "C";
+  } else if (80 < number && number < 89) {
+    console.log(`${number} is a B grade`);
+    return "B";
+  } else if (90 < number) {
+    console.log(`${number} is a A grade`);
+    return "A";
+  } else {
+    console.log(`${number} is a F grade`);
+    return "F";
   }
+}
   
   
   
